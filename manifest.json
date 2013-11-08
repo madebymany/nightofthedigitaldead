@@ -31,6 +31,8 @@
         "styles/main.css"
       ],
       "js": [
+        "scripts/utils.js",
+        "scripts/google.js",
         "scripts/contentscript.js"
       ],
       "run_at": "document_end",
