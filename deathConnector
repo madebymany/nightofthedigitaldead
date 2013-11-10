@@ -1,0 +1,28 @@
+printf "\033c"
+echo "•••••••••••••••••••••••••"
+echo "• Death Connector 0.1v® •"
+echo "•••••••••••••••••••••••••"
+echo ""
+echo "Press enter to start"
+read something
+
+printf "Connecting To Body: "
+echo ""
+for ((i=0; i<=100; i++)); 
+	do dots1=$dots• 
+	printf "*";
+	sleep 0.1;
+done; 
+
+echo ""
+ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+echo "Fake"
+ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+echo "Fake"
+ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+echo ""
+echo ""
+
+printf "Ready"
+read 
+
