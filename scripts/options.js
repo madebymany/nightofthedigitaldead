@@ -1,12 +1,13 @@
 var optionsForm = document.forms.options;
 var name;
 
-optionsForm.addEventListener("submit", function(e) {
+function onNameChange(e) {
   localStorage["name"] = optionsForm.name.value;
   e.preventDefault();
-}, false);
+}
 
-optionsForm.name.value = "Jack the Ripper";
+optionsForm.addEventListener("submit", onNameChange, false);
+optionsForm.name.addEventListener("input", onNameChange, false);
 
 if (name = localStorage["name"]) {
   optionsForm.name.value = name;

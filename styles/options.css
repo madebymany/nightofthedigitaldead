@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700|Just+Me+Again+Down+Here);
+
+html {
+  font-size: 1.6em;
+}
+
+body {
+  margin: 4em;
+  background-image: url("../images/paper.jpg");
+  background-size: 100%;
+  font-family: "Averia Serif Libre", cursive;
+  color: #2e1600;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p, li {
+  margin: 1em 0;
+  text-align: justify;
+  line-height: 1.4;
+}
+
+.nested-list {
+  list-style-type: lower-roman;
+}
+
+.disclaimer {
+  width: 28em;
+  margin: auto;
+}
+
+.signature {
+  width: 80%;
+  color: #2e1600;
+}
+
+.signature:after {
+  position: relative;
+  top: -1em;
+  content: "";
+  display: block;
+  border-bottom: 0.1em dotted;
+}
+
+.signature__input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  display: block;
+  font-family: "Just Me Again Down Here", cursive;
+  font-size: 3.6em;
+  color: inherit;
+}
