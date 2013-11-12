@@ -32,7 +32,10 @@
       ],
       "js": [
         "scripts/utils.js",
+        "scripts/twitter.js",
         "scripts/google.js",
+        "scripts/yahoo.js",
+        "scripts/bing.js",
         "scripts/contentscript.js"
       ],
       "run_at": "document_end",

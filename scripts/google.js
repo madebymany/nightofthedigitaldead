@@ -1,8 +1,6 @@
-var Google = function(config) {
+function Google(config) {
 
-  var nameRegex = new RegExp(config.name, "i");
-
-  this.killResultsCount = function() {
+  function killResultsCount() {
     var element = document.querySelector("#resultStats");
 
     if (!element) {
@@ -21,35 +19,19 @@ var Google = function(config) {
     }
 
     setCount();
-  };
+  }
 
-  this.killResults = function() {
-    var elements = document.querySelectorAll("#rso li.g");
-    var results;
-    var result;
-    var i = 0;
-
-    results = Array.apply(null, elements).filter(function(r) {
-      return nameRegex.test(r.innerHTML);
+  callAndRetry(function() {
+    var hasResults = killElements({
+      regexp: new RegExp(config.name, "i"),
+      elements: document.querySelectorAll("#rso li.g")
     });
 
-    if (!results.length) {
-      return false;
+    if (hasResults != false) {
+      killResultsCount();
     }
 
-    function findNextResult() {
-      if (result = results[i]) {
-        result.classList.add("hinge");
-        window.setTimeout(findNextResult,
-                          Math.floor(Math.random() * 2200) + 400);
-        i++;
-      }
-    }
+    return hasResults;
+  }, 1000);
 
-    findNextResult();
-    this.killResultsCount();
-  };
-
-  callAndRetry(this.killResults, 1000);
-
-};
+}
