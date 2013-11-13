@@ -33,7 +33,7 @@ function killElements(options) {
   findNextResult();
 }
 
-function killResultsCount(element) {
+function killCount(element) {
   var text = element.textContent;
   var count = parseInt(text.match(/[0-9,]+/)[0].replace(/,/g, ""));
 
@@ -46,4 +46,12 @@ function killResultsCount(element) {
   }
 
   setCount();
+}
+
+function lineThrough(element) {
+  span = document.createElement("span");
+  span.innerHTML = element.innerHTML;
+  span.style.textDecoration = "line-through";
+  element.innerHTML = "";
+  element.appendChild(span);
 }

@@ -14,3 +14,15 @@
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
 }
+
+@-webkit-keyframes blur {
+  0% { -webkit-filter: blur(0); }
+  100% { -webkit-filter: blur(20px); }
+}
+
+.blurring {
+  -webkit-animation-name: blur;
+  -webkit-animation-duration: 200ms;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+}

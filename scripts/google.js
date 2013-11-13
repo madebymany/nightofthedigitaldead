@@ -7,7 +7,7 @@ function Google(config) {
     });
 
     if (hasResults != false) {
-      killResultsCount(document.querySelector("#resultStats").firstChild);
+      killCount(document.querySelector("#resultStats").firstChild);
     }
 
     return hasResults;
