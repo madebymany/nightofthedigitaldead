@@ -1,6 +1,6 @@
 function Twitter(config) {
 
-  document.querySelector(".profile-picture .avatar").classList.add("blurring");
+  document.querySelector(".profile-picture .avatar").classList.add("fadeout");
 
   window.setTimeout(function() {
     lineThrough(document.querySelector(".fullname .profile-field"));

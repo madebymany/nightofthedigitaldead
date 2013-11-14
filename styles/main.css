@@ -15,14 +15,15 @@
   -webkit-animation-timing-function: ease-in-out;
 }
 
-@-webkit-keyframes blur {
-  0% { -webkit-filter: blur(0); }
-  100% { -webkit-filter: blur(20px); }
+@-webkit-keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
-.blurring {
-  -webkit-animation-name: blur;
-  -webkit-animation-duration: 200ms;
+.fadeout {
+  -webkit-animation-name: fadeout;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 0.6s;
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
 }
