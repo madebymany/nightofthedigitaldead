@@ -40,8 +40,8 @@ function killCount(element) {
   function setCount() {
     if (count >= 0) {
       element.textContent = text.replace(/[0-9,]+/, count.toLocaleString());
-      window.setTimeout(setCount, 80);
-      count = Math.floor(count - count / 10);
+      window.setTimeout(setCount, 100);
+      count = Math.floor(count - count / 20);
     }
   }
 
