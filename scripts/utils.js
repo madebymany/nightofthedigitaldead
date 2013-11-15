@@ -55,23 +55,3 @@ function lineThrough(element) {
   element.innerHTML = "";
   element.appendChild(span);
 }
-
-function walk(node, fn) {
-  var child, next;
-
-  switch (node.nodeType) {
-    case 1:  // Element
-    case 9:  // Document
-    case 11: // Document fragment
-      child = node.firstChild;
-      while (child) {
-        next = child.nextSibling;
-        walk(child, fn);
-        child = next;
-      }
-      break;
-    case 3: // Text node
-      fn(node);
-      break;
-  }
-}
